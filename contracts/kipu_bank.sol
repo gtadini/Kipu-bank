@@ -7,7 +7,7 @@ pragma solidity 0.8.26;
  * @author Tadini Gabriel
  */
 contract KipuBank {
-    /*///////////////////////////////////
+/*///////////////////////////////////
            State variables
 ///////////////////////////////////*/
     /// @notice The maximum amount (in wei) a user can withdraw per transaction (immutable).
@@ -28,7 +28,7 @@ contract KipuBank {
     /// @notice Counter for the total number of successful withdrawals made.
     uint256 public s_withdrawalCount;
 
-    /*///////////////////////////////////
+/*///////////////////////////////////
                Events
 ///////////////////////////////////*/
     /// @notice Event emitted when a user successfully deposits funds.
@@ -37,7 +37,7 @@ contract KipuBank {
     /// @notice Event emitted when a user successfully withdraws funds.
     event WithdrawalMade(address indexed user, uint256 value);
 
-    /*///////////////////////////////////
+/*///////////////////////////////////
                Errors
 ///////////////////////////////////*/
     /// @notice Error thrown when a deposit exceeds the global bank cap.
@@ -63,7 +63,7 @@ contract KipuBank {
     /// @notice Error thrown when the native ETH transfer operation fails.
     error KipuBank_TransferFailed();
 
-    /*///////////////////////////////////
+/*///////////////////////////////////
             Modifiers
 ///////////////////////////////////*/
     /**
@@ -87,11 +87,11 @@ contract KipuBank {
         _;
     }
 
-    /*///////////////////////////////////
+/*///////////////////////////////////
             Functions
 ///////////////////////////////////*/
 
-    /*///////////////////////////////////
+/*///////////////////////////////////
             Constructor
 ///////////////////////////////////*/
     /**
@@ -104,7 +104,7 @@ contract KipuBank {
         i_bankCap = _bankCap;
     }
 
-    /*/////////////////////////
+/*/////////////////////////
         external
 /////////////////////////*/
     /**
@@ -157,7 +157,7 @@ contract KipuBank {
         return s_deposits[msg.sender];
     }
 
-    /*/////////////////////////
+/*/////////////////////////
         private
 /////////////////////////*/
     /**
@@ -174,7 +174,7 @@ contract KipuBank {
         }
     }
 
-    /*////////////////////////
+/*////////////////////////
      Receive & Fallback
 /////////////////////////*/
     /**
